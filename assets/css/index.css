@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+#id-header {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.4s ease-in-out;
+}
+
+#id-header.scrolled {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 0.2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.685);
+    backdrop-filter: blur(5px);
+}
+
+header nav ul {
+    display: flex;
+    gap: 10vw;
+    list-style-type: none;
+}
+
+header nav ul li {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: transform 0.1s ease-in, opacity 0.1s ease-in;
+}
+
+header nav ul li.clicked {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: drop-shadow(0px 0px 1px white);
+}
+
+header nav ul li:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+h2 {
+    font-size: medium;
+    text-wrap: nowrap;
+    width: 220px;
+}
+
+/* Animação para os três pontinhos */
+@keyframes blinkDots {
+    0% {
+        content: ".";
+    }
+
+    33% {
+        content: "..";
+    }
+
+    66% {
+        content: "...";
+    }
+
+    100% {
+        content: "";
+    }
+}
+
+/* Estilo para os pontinhos */
+#dots::after {
+    content: "...";
+    animation: blinkDots 2s steps(1) infinite;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 400vh;
+    background-image: url(../img/background_vinho.jpg);
+    background-size: 300% 300%;
+    background-position: center;
+    backdrop-filter: blur(20px);
+    -ms-overflow-style: none;
+}
+
+main {
+    width: 100vw;
+    height: 400vh;
+    display: flex;
+    position: absolute;
+    z-index: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* Ajuste para não ficar atrás do header */
+}
+
+main ul {
+    font-size: xx-large;
+    display: flex;
+    gap: 4vw;
+    list-style-type: none;
+}
+
+main ul li a i {
+    margin-top: 1.5rem;
+    color: white;
+    transition: transform 0.5s ease-in-out, color 0.2s;
+}
+
+main ul li a i:hover {
+    color: rgb(75, 2, 2);
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 5px white);
+}
+
+#inicio img {
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    width: 200px;
+    /* Escalável conforme o tamanho da tela */
+    height: auto;
+}
+
+#inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.section{
+    opacity: 0;
+    /* Inicialmente invisível */
+    transition: all 0.5s ease-in-out;
+}
+
+#sobre-mim {
+    padding-top: 20px;
+    width: 95vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.section.active{
+    opacity: 1;
+}
+
+.conteudo-sobre-mim {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: min-content;
+    padding: 5vh 5vh;
+    background-color: rgba(14, 14, 14, 0.8);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.descricao-sobre-mim {
+    height: min-content;
+    width: 800px;
+    display: flex;
+    text-align: justify;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: large;
+}
+
+#sobre-mim img {
+    margin-right: 1vw;
+    border: none;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    border-radius: 5%;
+    width: 400px;
+    height: auto;
+
+}
+
+#projetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95vw;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.conteudo-projetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    flex-direction: column;
+    background-color: rgba(14, 14, 14, 0.8);
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.links-projetos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.links-projetos figure {
+    width: 300px;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.295);
+    padding: 10px;
+    transition: filter 0.1s ease-in-out, border 0.2s ease-in-out;
+}
+
+.links-projetos figure:hover {
+    filter: drop-shadow(0px 0px 1px white);
+    border: 1px solid white;
+}
+
+.links-projetos img {
+    width: auto;
+    height: 200px;
+}
+
+#contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95vw;
+    height: 100vh;
+}
+
+.links-contato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    padding: 50px;
+    font-size: 30px;
+    background-color: rgba(14, 14, 14, 0.8);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.links-contato h4 {
+    width: 100%;
+    height: min-content;
+}
+
+.links-contato-profissional {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(14, 14, 14, 0.8);
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 100%;
+    width: 400px;
+    padding: 20px;
+}
+
+.links-contato-profissional img {
+    width: 100px;
+    height: auto;
+    transition: filter 0.2s ease-in-out;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+.links-contato-profissional img:hover {
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+.links-contato-mensagem {
+    display: flex;
+    width: 500px;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(14, 14, 14, 0.8);
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.links-contato-mensagem ul {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.links-contato-mensagem ul li {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.links-contato-mensagem ul li i {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.mapa {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba(14, 14, 14, 0.8);
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+
+/* Media Queries para diferentes tamanhos de tela */
+@media (max-width: 1200px) {
+    main {
+        height: 500vh;
+    }
+
+    body {
+        height: 550vh;
+    }
+
+    body h2 {
+        font-size: small;
+        width: 180px;
+        text-wrap: nowrap;
+    }
+
+    #sobre-mim {
+        padding-top: 20vh;
+    }
+
+    .conteudo-sobre-mim {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .descricao-sobre-mim {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #projetos {
+        margin-top: 50vh;
+    }
+
+    .conteudo-projetos {
+        display: flex;
+        flex-direction: column;
+        height: min-content;
+    }
+
+    .links-projetos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links-projetos figure {
+        margin: 10px;
+    }
+
+    #contato {
+        margin-top: 30vh;
+    }
+
+    .links-contato {
+        margin-top: 60vh;
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links-contato-mensagem {
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .links-contato-profissional {
+        font-size: smaller;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .links-contato-profissional img {
+        margin-right: 10px;
+    }
+
+    .mapa {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        gap: 5vw;
+    }
+
+    #projetos {
+        margin-top: 60vh;
+    }
+
+    .links-contato-profissional img {
+        width: 50px;
+    }
+
+    .mapa {
+        width: min-content;
+    }
+}
