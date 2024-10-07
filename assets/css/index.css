@@ -366,13 +366,27 @@ main ul li a i:hover {
 
 
 /* Media Queries para diferentes tamanhos de tela */
-@media (max-width: 1200px) {
-    main {
-        height: 500vh;
-    }
+@media (max-width: 1050px) {
 
-    body {
-        height: 550vh;
+    header nav ul{
+        font-size: small;
+        gap: 5vw;
+    }
+    body, main{
+        height: 400vh;
+    }
+    #inicio{
+        height: 100vh;
+    }
+    #inicio img{
+        width: 150px;
+    }
+    #inicio h1{
+        font-size: small;
+        margin-top: 20px;
+    }
+    #inicio i{
+        font-size: x-large;
     }
 
     body h2 {
@@ -382,53 +396,70 @@ main ul li a i:hover {
     }
 
     #sobre-mim {
-        padding-top: 20vh;
+        height: 100vh;
+        padding-top: 25vh;
     }
 
     .conteudo-sobre-mim {
         display: flex;
         flex-direction: column;
     }
+    #sobre-mim img {
+        width: 300px;
+        height: auto;
+    }
 
     .descricao-sobre-mim {
         width: 100%;
         margin-top: 10px;
+        font-size: small;
     }
-
-    #projetos {
-        margin-top: 50vh;
+    #projetos{
+        height: 100vh;
+        padding-top: 25vh;
     }
-
     .conteudo-projetos {
         display: flex;
         flex-direction: column;
-        height: min-content;
+        font-size: small;
+        height: 80vh;
     }
 
     .links-projetos {
         display: flex;
         flex-direction: column;
+        height: 100%;
     }
 
     .links-projetos figure {
         margin: 10px;
+        height: min-content;
+        font-size: small;
     }
-
-    #contato {
-        margin-top: 30vh;
+    .links-projetos figure img{
+        width: 20%;
+        height: auto;
     }
-
+    #contato{
+        padding-top: 40vh;
+        height: 100vh;
+    }
     .links-contato {
-        margin-top: 60vh;
         height: min-content;
         display: flex;
         flex-direction: column;
+        font-size: medium;
     }
 
     .links-contato-mensagem {
         width: 100%;
         margin: 20px 0px;
+        height: min-content;
     }
+    .links-contato-mensagem p {
+        font-size: small;
+    }
+
 
     .links-contato-profissional {
         font-size: smaller;
@@ -438,23 +469,6 @@ main ul li a i:hover {
 
     .links-contato-profissional img {
         margin-right: 10px;
-    }
-
-    .mapa {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    header nav ul {
-        gap: 5vw;
-    }
-
-    #projetos {
-        margin-top: 60vh;
-    }
-
-    .links-contato-profissional img {
         width: 50px;
     }
 
