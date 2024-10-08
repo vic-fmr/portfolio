@@ -241,8 +241,9 @@ main ul li a i:hover {
 }
 
 .links-projetos figure {
-    width: 300px;
-    height: 50vh;
+    width: 20vw;
+    height: 40vh;
+    font-size: 1.5vw;
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -253,7 +254,6 @@ main ul li a i:hover {
     padding: 10px;
     transition: filter 0.1s ease-in-out, border 0.2s ease-in-out;
 }
-
 .links-projetos figure:hover {
     filter: drop-shadow(0px 0px 1px white);
     border: 1px solid white;
@@ -261,7 +261,7 @@ main ul li a i:hover {
 
 .links-projetos img {
     width: auto;
-    height: 200px;
+    height: 20vh;
 }
 
 #contato {
@@ -278,7 +278,7 @@ main ul li a i:hover {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 70%;
+    height: 60vh;
     padding: 50px;
     font-size: 30px;
     background-color: rgba(14, 14, 14, 0.8);
@@ -306,11 +306,11 @@ main ul li a i:hover {
 }
 
 .links-contato-profissional img {
-    width: 100px;
+    width: 6vw;
     height: auto;
     transition: filter 0.2s ease-in-out;
     border: 1px solid white;
-    border-radius: 25px;
+    border-radius: 35px;
 }
 
 .links-contato-profissional img:hover {
@@ -322,21 +322,20 @@ main ul li a i:hover {
     width: 500px;
     height: 100%;
     align-items: center;
+    justify-content: space-between;
     flex-direction: column;
     background-color: rgba(14, 14, 14, 0.8);
     border: 1px solid white;
     border-radius: 5px;
-    padding: 20px;
     text-align: center;
+    padding:20px 10px 100px 10px;
 }
 
 .links-contato-mensagem ul {
-    margin-top: 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    font-size: 20px;
+    font-size: 1.3vw;
+    gap: 3vh;
 }
 
 .links-contato-mensagem ul li {
@@ -347,8 +346,9 @@ main ul li a i:hover {
 
 .links-contato-mensagem ul li i {
     font-size: 30px;
-    margin-right: 20px;
+    margin-right: 10px;
 }
+
 
 .mapa {
     text-align: center;
@@ -357,19 +357,150 @@ main ul li a i:hover {
     align-items: center;
     flex-direction: column;
     height: 100%;
+    width: 100vw;
     background-color: rgba(14, 14, 14, 0.8);
     border: 1px solid white;
     border-radius: 5px;
-    padding: 20px;
 }
 .mapa iframe{
-    height: 80%;
+    width: 100%;
+    height: 100%;
 }
 
 
 
-/* Media Queries para diferentes tamanhos de tela */
 @media (max-width: 1050px) {
+    header{
+        width: 100vw;
+    }
+    header nav ul{
+        font-size: 1rem;
+        gap: 5vw;
+    }
+    body, main{
+        height: 400vh;
+    }
+    #inicio{
+        height: 100vh;
+    }
+    #inicio img{
+        width: 150px;
+    }
+    #inicio h1{
+        font-size: small;
+        margin-top: 20px;
+    }
+    #inicio i{
+        font-size: x-large;
+    }
+
+    body h2 {
+        font-size: small;
+        width: 250px;
+        text-wrap: nowrap;
+    }
+
+    #sobre-mim {
+        height: 100vh;
+        padding-top: 25vh;
+    }
+
+    .conteudo-sobre-mim {
+        display: flex;
+        flex-direction: column;
+    }
+    #sobre-mim img {
+        width: 350px;
+        height: auto;
+    }
+
+    .descricao-sobre-mim {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 2vw;
+    }
+    #projetos{
+        height: 100vh;
+    }
+    .conteudo-projetos {
+        display: flex;
+        flex-direction: column;
+        font-size: small;
+        height: 80vh;
+    }
+
+    .links-projetos {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .links-projetos figure {
+        margin: 10px;
+        height: min-content;
+        font-size: 1.5rex;
+    }
+    .links-projetos figure img{
+        width: 70%;
+        height: auto;
+    }
+    #contato{
+        width: 100vw;
+        height: 100vh;
+    }
+    .links-contato {
+        height: min-content;
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        font-size: medium;
+        padding-bottom: 0;
+    }
+
+    .links-contato-mensagem {
+        width: 90vw;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0px;
+        height: min-content;
+        padding-bottom: 0;
+    }
+    .links-contato-mensagem ul{
+        margin: 30px 0px;
+    }
+    .links-contato-mensagem p {
+        font-size: large;
+    }
+
+
+    .links-contato-profissional {
+        display: flex;
+        justify-content: center;
+        gap: 0px;
+        font-size: smaller;
+        flex-direction: row;
+        width: 90vw;
+        height: min-content;
+    }
+    .links-contato-profissional h4{
+        width: min-content;
+        margin-right: 50px;
+    }
+
+    .links-contato-profissional img {
+        margin-right: 20px;
+        width: 10vw;
+    }
+
+    .mapa {
+        height: 300px;
+        width: 90vw;
+    }
+    .mapa iframe{
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
     header{
         width: 100vw;
     }
@@ -396,7 +527,7 @@ main ul li a i:hover {
 
     body h2 {
         font-size: small;
-        width: 180px;
+        width: 250px;
         text-wrap: nowrap;
     }
 
@@ -441,7 +572,7 @@ main ul li a i:hover {
         font-size: 1rch;
     }
     .links-projetos figure img{
-        width: 40%;
+        width: 100%;
         height: auto;
     }
     #contato{
@@ -454,14 +585,19 @@ main ul li a i:hover {
         display: flex;
         flex-direction: column;
         font-size: medium;
+        padding-bottom: 0;
     }
 
     .links-contato-mensagem {
         width: 90vw;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin: 20px 0px;
         height: min-content;
+        padding-bottom: 0;
+    }
+    .links-contato-mensagem ul{
+        margin: 30px 0px;
     }
     .links-contato-mensagem p {
         font-size: small;
@@ -469,19 +605,27 @@ main ul li a i:hover {
 
 
     .links-contato-profissional {
+        display: flex;
+        justify-content: center;
+        gap: 0px;
         font-size: smaller;
         flex-direction: row;
         width: 90vw;
+        height: min-content;
+    }
+    .links-contato-profissional h4{
+        width: min-content;
+        margin-right: 50px;
     }
 
     .links-contato-profissional img {
-        margin-right: 10px;
-        width: 2rem;
+        margin-right: 20px;
+        width: 15vw;
     }
 
     .mapa {
+        height: 300px;
         width: 90vw;
-        height: min-content;
     }
     .mapa iframe{
         width: 100%;
