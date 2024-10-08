@@ -1,8 +1,8 @@
  // Texto que será exibido
- const texto = "developer in development";
+ const texto = "desenvolvedor em desenvolvimento";
 
  // Velocidade de digitação
- const velocidade = 50; // em milissegundos
+ const velocidade = 100; // em milissegundos
 
  let i = 0;
  const typingEffect = document.getElementById('typing-effect');

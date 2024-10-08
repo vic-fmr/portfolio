@@ -63,7 +63,7 @@ header nav ul li:hover {
 h2 {
     font-size: medium;
     text-wrap: nowrap;
-    width: 220px;
+    width:300px;
 }
 
 /* Animação para os três pontinhos */
@@ -88,7 +88,7 @@ h2 {
 /* Estilo para os pontinhos */
 #dots::after {
     content: "...";
-    animation: blinkDots 2s steps(1) infinite;
+    animation: blinkDots 0.8s steps(1) infinite;
 }
 
 body::-webkit-scrollbar {
@@ -449,7 +449,6 @@ main ul li a i:hover {
         height: 100vh;
     }
     .links-contato {
-        background-color: aqua;
         height: min-content;
         width: 95vw;
         display: flex;
