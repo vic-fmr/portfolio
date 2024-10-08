@@ -15,7 +15,6 @@ window.addEventListener("scroll", () => {
         item.classList.remove(classe)
     })
     const currentScroll = window.scrollY;
-    console.log(currentScroll)
 
     if (currentScroll > 500 && currentScroll <= 1300) {
         botaoSobreMim.classList.add(classe)
