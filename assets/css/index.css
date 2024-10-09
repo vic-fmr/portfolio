@@ -439,6 +439,7 @@ main ul li a i:hover {
         margin: 10px;
         height: min-content;
         font-size: 1.5rex;
+        width: 50vw;
     }
     .links-projetos figure img{
         width: 70%;
@@ -500,7 +501,7 @@ main ul li a i:hover {
         width: 100%;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 765px) {
     header{
         width: 100vw;
     }
@@ -550,6 +551,7 @@ main ul li a i:hover {
         font-size: 1.5rch;
     }
     #projetos{
+        padding-top: 30vh;
         height: 100vh;
     }
     .conteudo-projetos {
@@ -576,6 +578,7 @@ main ul li a i:hover {
         height: auto;
     }
     #contato{
+        padding-top: 20vh;
         width: 100vw;
         height: 100vh;
     }
