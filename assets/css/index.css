@@ -241,7 +241,7 @@ main ul li a i:hover {
 }
 
 .links-projetos figure {
-    width: 20vw;
+    width: 30vw;
     height: 40vh;
     font-size: 1.5vw;
     display: flex;
@@ -250,7 +250,7 @@ main ul li a i:hover {
     align-items: center;
     flex-direction: column;
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.295);
+    border: 1px solid rgba(255, 255, 255, 0.281);
     padding: 10px;
     transition: filter 0.1s ease-in-out, border 0.2s ease-in-out;
 }
@@ -402,7 +402,7 @@ main ul li a i:hover {
 
     #sobre-mim {
         height: 100vh;
-        padding-top: 25vh;
+        padding-top: 0;
     }
 
     .conteudo-sobre-mim {
@@ -533,7 +533,6 @@ main ul li a i:hover {
 
     #sobre-mim {
         height: 100vh;
-        padding-top: 25vh;
     }
 
     .conteudo-sobre-mim {
@@ -548,7 +547,7 @@ main ul li a i:hover {
     .descricao-sobre-mim {
         width: 100%;
         margin-top: 10px;
-        font-size: 1rch;
+        font-size: 1.5rch;
     }
     #projetos{
         height: 100vh;
@@ -569,10 +568,11 @@ main ul li a i:hover {
     .links-projetos figure {
         margin: 10px;
         height: min-content;
-        font-size: 1rch;
+        width: 90vw;
+        font-size: 1.3rch;
     }
     .links-projetos figure img{
-        width: 100%;
+        width: 50%;
         height: auto;
     }
     #contato{
