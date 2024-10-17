@@ -40,13 +40,13 @@ botaoContato.addEventListener("click", () => {
 });
 botaoInicio.addEventListener("click", () => {
   window.scrollTo({
-    top: 0,  // Volta ao topo da página
-    behavior: "smooth"  // Rolagem suave
+    top: 0, 
+    behavior: "smooth"
   });
 });
 
 
-
+//Bloco responsável pelo aparecimento suave das seções
 function reveal() {
   var sections = document.querySelectorAll('.section');
   for (var i = 0; i < sections.length; i++) {

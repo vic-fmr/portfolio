@@ -1,29 +1,47 @@
 
-const inicio_botao = document.querySelector("#inicio-botao");
-const projetos_botao = document.querySelector("#projetos-botao");
-const contato_botao = document.querySelector("#contato-botao");
-const navItems = document.querySelectorAll(".nav-button")
+const navItems = document.querySelectorAll(".nav-button");
 
-const classe = "clicked"
+const sections = [
+  { element: document.querySelector("#inicio"), button: botaoInicio },
+  { element: document.querySelector("#sobre-mim"), button: botaoSobreMim },
+  { element: document.querySelector("#projetos"), button: botaoProjetos },
+  { element: document.querySelector("#contato"), button: botaoContato },
+];
 
-window.addEventListener("DOMContentLoaded", () => {
-    inicio_botao.classList.add(classe)
-})
+const classe = "clicked";
+let activeButton = botaoInicio; // Inicialmente, o botão de "Início" está ativo
 
-window.addEventListener("scroll", () => {
-    navItems.forEach((item) => {
-        item.classList.remove(classe)
-    })
-    const currentScroll = window.scrollY;
+// Função para alterar o botão ativo
+function setActiveButton(newButton) {
+  if (activeButton !== newButton) {
+    activeButton.classList.remove(classe);
+    newButton.classList.add(classe);
+    activeButton = newButton;
+  }
+}
 
-    if (currentScroll > 500 && currentScroll <= 1300) {
-        botaoSobreMim.classList.add(classe)
-    }else if (currentScroll > 1300 && currentScroll < 2000){
-        projetos_botao.classList.add(classe)
-    } else if(currentScroll >= 2000){
-        contato_botao.classList.add(classe)
-    } else{
-        inicio_botao.classList.add(classe)
+// Configura o observador
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const sectionData = sections.find(
+        (section) => section.element === entry.target
+      );
+      if (sectionData) {
+        setActiveButton(sectionData.button);
+      }
     }
+  });
+}, {
+  threshold: 0.5 // 50% da seção precisa estar visível para ser considerada "visível"
+});
 
+// Observa todas as seções
+sections.forEach((section) => {
+  observer.observe(section.element);
+});
+
+// Adiciona a classe "clicked" ao botão de início no carregamento da página
+window.addEventListener("DOMContentLoaded", () => {
+  botaoInicio.classList.add(classe);
 });
