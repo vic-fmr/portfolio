@@ -1,0 +1,6 @@
+{
+  "name": "Portfolio ADS - Victor Marques",
+  "description": "Portfólio interativo para Victor Marques, estudante de ADS no 4º período, integrado com IA para responder perguntas sobre projetos e competências.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

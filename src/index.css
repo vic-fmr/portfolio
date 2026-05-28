@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;850&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Override default fonts with high luxury selections */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Premium Charcoal-Slate Obsidian Palette (clean slate dark theme) */
+  --color-zinc-50: #f8fafc;
+  --color-zinc-100: #f1f5f9;
+  --color-zinc-200: #e2e8f0;
+  --color-zinc-300: #cbd5e1;
+  --color-zinc-400: #94a3b8;
+  --color-zinc-500: #64748b;
+  --color-zinc-600: #475569;
+  --color-zinc-700: #334155;
+  --color-zinc-750: #1e293b;
+  --color-zinc-800: #1e293b; /* Premium subtle gray borders */
+  --color-zinc-850: #0f172a; /* Deep charcoal details */
+  --color-zinc-900: #0b0f19; /* High-end dark slate card background */
+  --color-zinc-905: #020617; /* Dark shadow surfaces */
+  --color-zinc-950: #030712; /* Intensely clean sophisticated deep dark canvas */
+
+  /* Override default indigo with highly-saturated bordeaux/wine accents */
+  --color-indigo-50: #fff1f2;
+  --color-indigo-100: #ffe4e6;
+  --color-indigo-200: #fecdd3;
+  --color-indigo-300: #fda4af;
+  --color-indigo-350: #f43f5e;
+  --color-indigo-400: #f43f5e; /* Bright rose berry */
+  --color-indigo-500: #be123c; /* Elegant dark red rose/wine primary */
+  --color-indigo-501: #be123c;
+  --color-indigo-550: #be123c;
+  --color-indigo-505: #be123c;
+  --color-indigo-600: #9f1239; /* Deep bordeaux */
+  --color-indigo-650: #881337; /* Very rich dark bordeaux */
+  --color-indigo-700: #4c0519; /* Ultimate dark sangria */
+  --color-indigo-950: #1c0005;
+
+  /* Accent highlights */
+  --color-purple-500: #9f1239;
+  --color-purple-950: #140003;
+}
