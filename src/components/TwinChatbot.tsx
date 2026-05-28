@@ -60,7 +60,7 @@ export default function TwinChatbot() {
       }
 
       const data = await res.json();
-      
+
       const botMessage: ChatMessage = {
         id: `bot-${Date.now()}`,
         sender: "bot",
@@ -103,13 +103,13 @@ export default function TwinChatbot() {
   // Safe and clean custom formatter to render basic markdown patterns like Bold, Lists, and Code blocks
   const parseMarkdownText = (text: string) => {
     if (!text) return "";
-    
+
     // Split text into line groups
     const lines = text.split("\n");
-    
+
     return lines.map((line, lineIdx) => {
       let trimmed = line.trim();
-      
+
       // Handle Code Block start/end or single lines
       if (trimmed.startsWith("```")) {
         return (
@@ -204,24 +204,22 @@ export default function TwinChatbot() {
                 className={`flex gap-3 max-w-[85%] ${isBot ? "mr-auto" : "ml-auto flex-row-reverse"}`}
               >
                 {/* Avatar Icon */}
-                <div className={`w-8 h-8 rounded-lg border shrink-0 flex items-center justify-center ${
-                  isBot 
-                    ? "bg-indigo-501/10 border-indigo-500/20 text-indigo-400" 
+                <div className={`w-8 h-8 rounded-lg border shrink-0 flex items-center justify-center ${isBot
+                    ? "bg-indigo-501/10 border-indigo-500/20 text-indigo-400"
                     : "bg-zinc-800 border-zinc-700 text-zinc-300"
-                }`}>
+                  }`}>
                   {isBot ? <Bot size={15} /> : <User size={15} />}
                 </div>
 
                 {/* Message body */}
                 <div className="space-y-1">
-                  <div className={`p-3.5 rounded-2xl tracking-normal ${
-                    isBot 
+                  <div className={`p-3.5 rounded-2xl tracking-normal ${isBot
                       ? "bg-zinc-950 text-zinc-200 border border-zinc-850/60 rounded-tl-sm"
                       : "bg-indigo-600 text-white rounded-tr-sm"
-                  }`}>
+                    }`}>
                     {isBot ? parseMarkdownText(msg.text) : <p className="text-sm leading-relaxed">{msg.text}</p>}
                   </div>
-                  
+
                   <span className={`text-[9px] font-mono text-zinc-500 block ${!isBot && "text-right"}`}>
                     {msg.timestamp}
                   </span>
