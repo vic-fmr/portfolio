@@ -111,7 +111,7 @@ export default function ProjectsShowcase() {
                     </span>
                   ))}
                   {project.stack.length > 4 && (
-                    <span className="text-[10px] font-mono text-zinc-650 bg-zinc-950 px-2 py-0.5 rounded">
+                    <span className="text-[10px] font-mono text-zinc-400 bg-zinc-950 px-2 py-0.5 rounded">
                       +{project.stack.length - 4} mais
                     </span>
                   )}

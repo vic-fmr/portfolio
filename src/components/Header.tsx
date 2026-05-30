@@ -1,8 +1,11 @@
 import { PERSONAL_INFO } from "../data";
-import { Github, Linkedin, Mail, MapPin, GraduationCap } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, GraduationCap, FileDown } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function Header() {
+  const handleExportPDF = () => {
+    window.print();
+  };
   const containerVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
@@ -138,6 +141,15 @@ export default function Header() {
                 <span>LinkedIn</span>
               </a>
             </div>
+
+            <a
+              href="/CV-Victor_Ferreira_Marques.pdf"
+              download
+              className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-xs font-mono font-bold bg-zinc-950 hover:bg-zinc-850 text-indigo-400 border border-zinc-800 transition-all cursor-pointer no-print"
+            >
+              <FileDown size={14} />
+              <span>Baixar Currículo (PDF)</span>
+            </a>
           </div>
         </motion.div>
       </div>

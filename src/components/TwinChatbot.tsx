@@ -191,7 +191,7 @@ export default function TwinChatbot() {
       </div>
 
       {/* Bubble Messages list */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-zinc-900/20 select-text">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-zinc-900/20 select-text pb-12 custom-scrollbar">
         <AnimatePresence initial={false}>
           {messages.map((msg) => {
             const isBot = msg.sender === "bot";
@@ -205,8 +205,8 @@ export default function TwinChatbot() {
               >
                 {/* Avatar Icon */}
                 <div className={`w-8 h-8 rounded-lg border shrink-0 flex items-center justify-center ${isBot
-                    ? "bg-indigo-501/10 border-indigo-500/20 text-indigo-400"
-                    : "bg-zinc-800 border-zinc-700 text-zinc-300"
+                  ? "bg-indigo-501/10 border-indigo-500/20 text-indigo-400"
+                  : "bg-zinc-800 border-zinc-700 text-zinc-300"
                   }`}>
                   {isBot ? <Bot size={15} /> : <User size={15} />}
                 </div>
@@ -214,8 +214,8 @@ export default function TwinChatbot() {
                 {/* Message body */}
                 <div className="space-y-1">
                   <div className={`p-3.5 rounded-2xl tracking-normal ${isBot
-                      ? "bg-zinc-950 text-zinc-200 border border-zinc-850/60 rounded-tl-sm"
-                      : "bg-indigo-600 text-white rounded-tr-sm"
+                    ? "bg-zinc-950 text-zinc-200 border border-zinc-850/60 rounded-tl-sm"
+                    : "bg-indigo-600 text-white rounded-tr-sm"
                     }`}>
                     {isBot ? parseMarkdownText(msg.text) : <p className="text-sm leading-relaxed">{msg.text}</p>}
                   </div>

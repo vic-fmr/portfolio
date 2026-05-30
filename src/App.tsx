@@ -20,10 +20,10 @@ export default function App() {
 
         {/* Main Interface Core Layout: Bento Grid or Two Column on Large Screens */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Left Column: Academic Projects, Skills, and Curriculum Schedule */}
           <div className="lg:col-span-7 space-y-12">
-            
+
             {/* Academic Projects Showcase Section */}
             <section id="academic-projects" className="scroll-mt-6">
               <ProjectsShowcase />
@@ -53,18 +53,21 @@ export default function App() {
                 <Sparkles size={18} className="text-indigo-400" />
                 <h2 className="text-lg font-bold text-white tracking-tight">Faça uma Entrevista Virtual</h2>
               </div>
-              <p className="text-xs text-zinc-400 leading-relaxed font-sans">
-                Interaja em tempo real com meu <strong>Gêmeo Virtual</strong> alimentado por Inteligência Artificial para fazer perguntas detalhadas sobre projetos, competências e disponibilidade.
+              <p className="flex items-center gap-2 text-zinc-400 text-xs font-mono">
+                <Terminal size={12} className="text-zinc-500" />
+                <span>Digite suas perguntas e obtenha respostas instantâneas!</span>
               </p>
+
             </div>
 
             <TwinChatbot />
+
           </div>
 
         </div>
 
         {/* Humble Footer */}
-        <footer className="pt-12 mt-16 border-t border-zinc-900 text-center flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-zinc-550 font-mono">
+        <footer className="pt-12 mt-16 border-t border-zinc-900 text-center flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-zinc-400 font-mono">
           <div className="flex items-center justify-center sm:justify-start gap-1.5">
             <Cpu size={12} className="text-zinc-650" />
             <span>Victor Marques • Estudante de ADS (4º Período)</span>
