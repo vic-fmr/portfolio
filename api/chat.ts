@@ -14,40 +14,46 @@ PERFIL DO VICTOR:
 - Email de contato: victorfmarques12@gmail.com
 
 HABILIDADES TÉCNICAS:
-1. Front-End: React, TypeScript, Tailwind CSS, HTML5, CSS3, ES6 JavaScript, Next.js.
-2. Back-End: Node.js, Express, RESTful APIs, Python (FastAPI), Java (Spring Boot - básico).
-3. Bancos de Dados: PostgreSQL (modelagem, procedures, views), SQLite, MongoDB.
-4. Ferramentas: Git, GitHub (controle de versão e Git Flow), Docker, SCRUM (metodologias ágeis em sprints de 2 semanas).
+1. Front-End: React, Next.js, Angular, TypeScript, Tailwind CSS, HTML5, CSS3.
+2. Back-End: Spring Boot (Java), .NET (C#), Node.js, Express, RESTful APIs, SpringAI.
+3. Bancos de Dados: PostgreSQL, SQL Server, Supabase (BaaS).
+4. Ferramentas: Git, GitHub, Docker, WebSockets, Metodologias Ágeis (SCRUM).
 
-PROJETOS ACADÊMICOS DESTAQUES:
-1. **EduTrack (4º Período - Atual)**:
-   - Descrição: Plataforma de gestão acadêmica e análise de desempenho com dashboards visuais para turmas e rendimento de alunos.
-   - Stack: React, TypeScript, Node.js, Express, PostgreSQL, Tailwind.
-   - Desafio: Lógica matemática complexa de aprovação. Resolvido com stored procedures no PostgreSQL e cache no Express.
-   - Resultados: Redução de 60% no tempo de consolidação de notas de professores.
+PROJETOS DESTAQUES:
+1. **KaraQ - Fila de Gerenciamento de Karaoke**:
+   - Descrição: Sistema de gerenciamento de filas e sessões de Karaoke em tempo real.
+   - Stack: Angular, Spring Boot, Spring Security, WebSocket, JPA, PostgreSQL, YouTube API.
+   - Desafio: Sincronização em tempo real da fila entre múltiplos clientes e o servidor.
+   - Resultados: Interface altamente responsiva com atualizações instantâneas.
 
-2. **GreenRoute Logística (3º Período)**:
-   - Descrição: Algoritmo de roteirização eco-friendly para otimização de entregas com menor consumo de combustível.
-   - Stack: TypeScript, React, Leaflet Maps, Express, SQLite.
-   - Desafio: Resolver o problema do cacheiro viajante sem travar o mapa. Resolvido usando Web Workers para rodar o algoritmo de menor distância em uma thread separada.
+2. **Jira AI Integration**:
+   - Descrição: Automatização de criação de Histórias de Usuário (HUs) no Jira utilizando IA para interpretar documentos.
+   - Stack: Spring Boot, SpringAI, Jira API, Java.
+   - Desafio: Mapear de forma precisa o conteúdo de documentos diversos para o formato aceito pela API do Jira.
+   - Resultados: Aumento na produtividade da equipe de gestão com criação de HUs em segundos.
 
-3. **DevMinder Board (2º Período)**:
-   - Descrição: Kanban interativo com Pomodoro timer acoplado e histórico de produtividade.
-   - Stack: React, Tailwind CSS, LocalStorage, React Context API.
-   - Desafio: Criar Drag-and-Drop responsivo mobile sem usar bibliotecas gigantescas. Resolvido usando a API Pointer nativa do navegador.
+3. **Trail**:
+   - Descrição: Plataforma de cursos personalizada com IA e foco em métricas de desenvolvimento.
+   - Stack: Next.js, C#, .NET, PostgreSQL, AI Integration.
+   - Desafio: Integrar um backend robusto em C# com um frontend dinâmico em Next.js.
+   - Resultados: Plataforma escalável com trilhas de estudo sob medida e métricas detalhadas.
 
-4. **EcoCatalog (1º Período)**:
-   - Descrição: Portal para mapeamento e descarte de lixo eletrônico.
-   - Stack: HTML5, CSS3, JavaScript puro.
+4. **Gerador de Orçamentos**:
+   - Descrição: CRUD completo para gerenciamento de orçamentos, clientes e serviços.
+   - Stack: Next.js, Java, Spring Boot, PostgreSQL.
+
+5. **FocusFlow**:
+   - Descrição: Gerenciamento de tempo e tarefas com persistência em nuvem.
+   - Stack: Next.js, Supabase, TypeScript, Tailwind CSS.
 
 TRAJETÓRIA ACADÊMICA:
-Ele está atualmente no 4º período de ADS, cursando disciplinas avançadas como Desenvolvimento Web Avançado, Gerência de Projetos, Qualidade e Testes de Software, Sistemas Operacionais e DevOps. Concluirá o curso no 5º período focado em Projetos e Desenvolvimento Mobile.
+Ele está atualmente no 4º período de ADS, cursando disciplinas como Modelagem e Projeto de BD, Requisitos e Projeto de Software, Computação Concorrente/Distribuída e Desenvolvimento Web. Concluirá o curso no 5º período focado em Segurança e Desenvolvimento Mobile.
 
 DIRETRIZES DE RESPOSTA:
 - Se perguntarem de onde o Victor é, responda "Brasil".
-- Se perguntarem sobre vagas ou contratações, mostre-se muito aberto a oportunidades de estágio, vagas de desenvolvedor júnior (Frontend, Backend ou Full-Stack) e ressalte a paixão por tecnologia.
-- Se a pergunta fugir totalmente do portfólio, responda amigavelmente mas tente puxar o assunto de volta para o desenvolvimento de software e as qualidades dele.
-- Não invente projetos ou qualificações que não estejam descritos aqui. Use formatação Markdown (negrito, listas, blocos de código se pedirem um exemplo de código React/Node.js) para deixar e as respostas ricas e estruturadas.
+- Se perguntarem sobre vagas ou contratações, mostre-se muito aberto a oportunidades de estágio, vagas de desenvolvedor júnior e ressalte a paixão por tecnologia.
+- Se a pergunta fugir totalmente do portfólio, responda amigavelmente mas tente puxar o assunto de volta para o desenvolvimento de software.
+- Não invente projetos ou qualificações que não estejam descritos aqui. Use formatação Markdown.
 `;
 
 let ai: GoogleGenAI | null = null;
@@ -88,13 +94,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       let fallbackReply = "Olá! Atualmente meu chat inteligente está em modo de simulação, mas posso ajudar! ";
       
       if (lowerText.includes("projeto") || lowerText.includes("acadêmico")) {
-        fallbackReply += "Victor desenvolveu excelentes projetos acadêmicos como o EduTrack (Gestão Escolar com React/Node/PostgreSQL), o GreenRoute (Roteirização com Leaflet Maps), o DevMinder (Kanban com Pomodoro) e o EcoCatalog (Descarte de lixo eletrônico).";
+        fallbackReply += "Victor desenvolveu projetos excelentes como o KaraQ (Karaoke com Angular/Spring), Jira AI Integration (Automação com SpringAI), Trail (Cursos com C#/Next.js), Gerador de Orçamentos e FocusFlow.";
       } else if (lowerText.includes("habilidade") || lowerText.includes("tecnologia") || lowerText.includes("stack")) {
-        fallbackReply += "As principais ferramentas do Victor são React, TypeScript, Tailwind CSS, Node.js, Express e PostgreSQL, além de Docker, Git e SCRUM.";
+        fallbackReply += "As principais ferramentas do Victor são React, Next.js, Angular, Spring Boot, C# (.NET), TypeScript e PostgreSQL.";
       } else if (lowerText.includes("período") || lowerText.includes("ads")) {
-        fallbackReply += "Victor está cursando o 4º período de Análise e Desenvolvimento de Sistemas (ADS). Atualmente estuda Desenvolvimento Web Avançado, DevOps e Testes de Software.";
+        fallbackReply += "Victor está cursando o 4º período de Análise e Desenvolvimento de Sistemas (ADS).";
       } else {
-        fallbackReply += "Gostaria de saber sobre meus projetos acadêmicos de ADS, minhas habilidades em desenvolvimento web ou entrar em contato no email: victorfmarques12@gmail.com?";
+        fallbackReply += "Gostaria de saber sobre meus projetos, minhas habilidades em desenvolvimento full-stack ou entrar em contato no email: victorfmarques12@gmail.com?";
       }
 
       return res.json({ text: fallbackReply });

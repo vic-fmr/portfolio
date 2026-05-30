@@ -18,10 +18,10 @@ export default function TwinChatbot() {
 
   // Suggested questions for visitors to quickly interact
   const preDefinedPrompts = [
-    { label: "Como funciona o EduTrack?", text: "Me fale detalhes sobre o projeto EduTrack que você desenvolveu." },
-    { label: "Quais são suas tecnologias?", text: "Quais são as principais linguagens e frameworks que você domina no desenvolvimento web?" },
-    { label: "Busca oportunidades?", text: "Você está buscando estágio ou vagas como desenvolvedor júnior?" },
-    { label: "Desafio no GreenRoute?", text: "Qual foi o maior desafio técnico que você resolveu no projeto GreenRoute?" },
+    { label: "O que é o KaraQ?", text: "Me fale detalhes sobre o projeto KaraQ de gerenciamento de Karaoke." },
+    { label: "Como funciona o Jira AI?", text: "Explique como você automatizou a criação de HUs no Jira com IA." },
+    { label: "O que é o projeto Trail?", text: "Fale sobre a plataforma Trail e como a IA personaliza os cursos." },
+    { label: "Quais são suas tecnologias?", text: "Quais são as principais linguagens e frameworks que você domina?" },
   ];
 
   useEffect(() => {
@@ -74,7 +74,7 @@ export default function TwinChatbot() {
       const errorMessage: ChatMessage = {
         id: `bot-err-${Date.now()}`,
         sender: "bot",
-        text: "Desculpe, ocorreu uma instabilidade de comunicação com o meu cérebro de IA externo. Mas posso adiantar que adoro TypeScript, React, Node.js e bancos relacionais! Vamos falar por email? (victorfmarques12@gmail.com)",
+        text: "Desculpe, ocorreu uma instabilidade de comunicação com o meu cérebro de IA externo. Mas posso adiantar que adoro TypeScript, React, Spring Boot, Java e C#! Vamos falar por email? (victorfmarques12@gmail.com)",
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
       };
       setMessages((prev) => [...prev, errorMessage]);

@@ -1,5 +1,5 @@
 import { PERSONAL_INFO } from "../data";
-import { Github, Linkedin, Mail, MapPin, GraduationCap, Sparkles } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, GraduationCap } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function Header() {
@@ -31,30 +31,26 @@ export default function Header() {
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         {/* Left Side: Avatar Photo + Bio Block */}
         <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center max-w-3xl">
-          
+
           {/* Profile Photo Wrapper - EXTREMELY EASY TO CUSTOMIZE:
               To use your own local photo, just upload it and replace the 'src' below with your file path:
               e.g., src="/src/minha_foto.jpg" or src="https://suafoto.com/link"
           */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="relative shrink-0 select-none group"
           >
             <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300" />
             <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border border-zinc-750 bg-zinc-900 flex items-center justify-center">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=256"
+                src="/profile.webp"
                 alt={PERSONAL_INFO.name}
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover grayscale contrast-110 hover:grayscale-0 transition-all duration-500 scale-102 hover:scale-105"
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                  const fallback = document.getElementById("fallback-avatar");
-                  if (fallback) fallback.classList.remove("hidden");
-                }}
+                width={112}
+                height={112}
+                className="w-full h-full object-cover rounded-2xl"
               />
-              <div 
-                id="fallback-avatar" 
+              <div
+                id="fallback-avatar"
                 className="hidden flex flex-col items-center justify-center text-center p-2"
               >
                 <GraduationCap className="text-indigo-400 mb-1" size={24} />
@@ -62,7 +58,7 @@ export default function Header() {
                 <span className="text-[9px] font-mono text-zinc-500">Open Source</span>
               </div>
             </div>
-            
+
             {/* Decorative Overlay Tip for user instruction */}
             <div className="absolute -bottom-1.5 right-1.5 bg-zinc-900 border border-zinc-750 text-[8px] font-mono text-zinc-400 group-hover:text-white px-1.5 py-0.5 rounded shadow-lg transition-colors cursor-help" title="Edite o arquivo '/src/components/Header.tsx' para substituir esta URL por sua foto pessoal!">
               FOTO ✎
@@ -113,7 +109,7 @@ export default function Header() {
               <MapPin size={13} className="text-zinc-500" />
               <span>{PERSONAL_INFO.location} • Remoto / Híbrido</span>
             </div>
-            
+
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
               className="group flex items-center gap-2 text-zinc-300 hover:text-white text-xs font-mono transition-colors"

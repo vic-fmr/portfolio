@@ -31,33 +31,33 @@ export default function GitHubIntegration() {
   // Fallback high-quality simulation if GitHub rate limit is triggered
   const fallbackRepos: GithubRepo[] = [
     {
-      name: "edutrack-school-manager",
-      description: "Plataforma de gestão acadêmica com stored procedures no PostgreSQL e dashboards dinâmicos no React.",
-      html_url: `https://github.com/${username}/edutrack`,
-      homepage: "https://example.com/edutrack-demo",
-      stargazers_count: 5,
-      forks_count: 1,
+      name: "karaq-karaoke-manager",
+      description: "Sistema de gerenciamento de filas e sessões de Karaoke em tempo real com Angular e Spring Boot.",
+      html_url: `https://github.com/${username}/karaq`,
+      homepage: "https://example.com/karaq-demo",
+      stargazers_count: 8,
+      forks_count: 2,
       language: "TypeScript",
       updated_at: "2026-05-27T22:30:00Z"
     },
     {
-      name: "green-route-logistica",
-      description: "Algoritmo de menor caminho eco-friendly utilizando estruturas de grafos ponderados em TypeScript.",
-      html_url: `https://github.com/${username}/green-route`,
+      name: "jira-ai-integration",
+      description: "Automatização de criação de Histórias de Usuário no Jira utilizando SpringAI e APIs REST.",
+      html_url: `https://github.com/${username}/jira-ai`,
       homepage: null,
-      stargazers_count: 3,
-      forks_count: 0,
-      language: "TypeScript",
+      stargazers_count: 12,
+      forks_count: 3,
+      language: "Java",
       updated_at: "2026-05-20T10:15:00Z"
     },
     {
-      name: "devminder-kanban",
-      description: "Quadro de tarefas minimalista integrado a temporizadores Pomodoro e persistência offline.",
-      html_url: `https://github.com/${username}/devminder`,
-      homepage: "https://example.com/devminder-board",
-      stargazers_count: 4,
-      forks_count: 2,
-      language: "React",
+      name: "trail-educational-platform",
+      description: "Plataforma de cursos personalizada com IA utilizando Next.js e C# para métricas de desenvolvimento.",
+      html_url: `https://github.com/${username}/trail`,
+      homepage: "https://example.com/trail-demo",
+      stargazers_count: 15,
+      forks_count: 4,
+      language: "C#",
       updated_at: "2026-04-12T14:40:00Z"
     }
   ];
@@ -127,9 +127,7 @@ export default function GitHubIntegration() {
             <Github size={22} className="text-indigo-400" />
             <span>Perfil do GitHub</span>
           </h2>
-          <p className="text-xs text-zinc-400 mt-1 leading-relaxed">
-            Mostre os repositórios mais recentes ou os projetos selecionados, com links diretos para o código-fonte e demonstrações ao vivo, se disponíveis.
-          </p>
+
         </div>
 
         {/* Reload button when repository tab is active */}
@@ -181,22 +179,20 @@ export default function GitHubIntegration() {
       <div className="flex bg-zinc-900 p-1 rounded-lg border border-zinc-850 self-start inline-flex">
         <button
           onClick={() => setActiveTab("api-repos")}
-          className={`px-4 py-1.5 rounded-md text-xs font-mono transition-all cursor-pointer ${
-            activeTab === "api-repos"
+          className={`px-4 py-1.5 rounded-md text-xs font-mono transition-all cursor-pointer ${activeTab === "api-repos"
               ? "bg-indigo-650 text-white shadow-sm"
               : "text-zinc-400 hover:text-white"
-          }`}
+            }`}
         >
           Repositórios Recentes
         </button>
-        
+
         <button
           onClick={() => setActiveTab("curated-projects")}
-          className={`px-4 py-1.5 rounded-md text-xs font-mono transition-all cursor-pointer ${
-            activeTab === "curated-projects"
+          className={`px-4 py-1.5 rounded-md text-xs font-mono transition-all cursor-pointer ${activeTab === "curated-projects"
               ? "bg-indigo-650 text-white shadow-sm"
               : "text-zinc-400 hover:text-white"
-          }`}
+            }`}
         >
           Projetos Selecionados
         </button>
@@ -228,7 +224,7 @@ export default function GitHubIntegration() {
                       {repo.name}
                     </a>
                   </h4>
-                  
+
                   <span className="shrink-0 text-[10px] font-mono bg-indigo-500/10 text-indigo-400 border border-indigo-500/15 px-2 py-0.5 rounded">
                     {repo.language}
                   </span>
@@ -288,7 +284,7 @@ export default function GitHubIntegration() {
                   <h4 className="font-sans text-sm font-bold text-white tracking-tight">
                     {proj.title}
                   </h4>
-                  
+
                   <span className="text-[9px] font-mono bg-zinc-800 text-zinc-400 border border-zinc-750 px-2 py-0.5 rounded">
                     {proj.period}
                   </span>

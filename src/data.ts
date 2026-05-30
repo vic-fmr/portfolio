@@ -6,7 +6,7 @@ export const PERSONAL_INFO = {
   location: "Brasil",
   period: "4º Período",
   currentInstitution: "Faculdade de Tecnologia",
-  bio: "Estudante de Análise e Desenvolvimento de Sistemas (ADS) focado em construir aplicações web modernas, escaláveis e centradas no usuário. Entusiasmado pelo ecossistema TypeScript (React/Node.js) e apaixonado por arquitetura de software e inteligência artificial.",
+  bio: "Estudante de Análise e Desenvolvimento de Sistemas (ADS) focado no desenvolvimento Full-Stack com experiência em ecossistemas modernos como TypeScript (React/Next.js/Angular), Java (Spring Boot, Security, Data JPA, AI).",
   email: "victorfmarques12@gmail.com",
   github: "https://github.com",
   linkedin: "https://linkedin.com",
@@ -14,147 +14,142 @@ export const PERSONAL_INFO = {
 
 export const PROJECTS: Project[] = [
   {
-    id: "fictional-restaurant",
-    title: "SaborTech (Fictício - Exemplo de Estruturação)",
-    description: "Sistema completo de pedidos online e agendamento de reservas para pequenos restaurantes comunitários.",
-    longDescription: "Este projeto exemplifica a estrutura acadêmica ideal de portfólio de ADS para demonstrar competências interdisciplinares. Trata-se de uma plataforma que ajuda restaurantes locais a receberem pedidos digitais para entrega ou retirada, além de gerenciar a ocupação de mesas em tempo real.",
-    objectives: "Desenvolver uma SPA interativa e responsiva integrada a uma API escalável de persistência relacional. O objetivo principal é automatizar o fluxo de despacho de pedidos do restaurante, minimizando em até 35% o atraso no envio de notificações de confirmação ao cliente.",
-    stack: ["HTML5", "CSS3", "JavaScript (ES6)", "React", "Node.js", "Express", "PostgreSQL"],
-    role: "Arquiteto de Software e Desenvolvedor Full-Stack Solo. Responsável pelo levantamento de requisitos utilizando UML, desenho do modelo lógico de dados, codificação do backend RESTful e design do dashboard de pedidos no front-end.",
-    period: "Exemplo Acadêmico",
-    type: "fictional-example",
-    challenges: "Sincronizar a fila de pedidos em tempo real na tela do operador de caixa sem precisar recarregar a visualização constantemente.",
-    solutions: "Implementação de consultas em pooling periódico inteligente no front-end React acopladas a transações com isolamento READ COMMITTED no PostgreSQL para evitar leitura suja de reservas concorrentes.",
-    results: "Redução teórica de 40% no tempo de feedback operacional. O projeto serve como um modelo exemplar de documentação acadêmica detalhada em nosso currículo de ADS.",
+    id: "karaq",
+    title: "KaraQ - Fila de Gerenciamento de Karaoke",
+    description: "Sistema de gerenciamento de filas e sessões de Karaoke em tempo real.",
+    longDescription: "O KaraQ é uma plataforma robusta para gestão de filas de Karaoke. O sistema permite a entrada de usuários em sessões, escolha de músicas via API do YouTube e o gerenciamento dinâmico da fila de espera em tempo real através de WebSockets.",
+    objectives: "Automatizar o gerenciamento de filas em estabelecimentos de Karaoke, proporcionando uma experiência fluida tanto para os clientes quanto para os operadores.",
+    stack: ["Angular", "Spring Boot", "Spring Security", "WebSocket", "JPA", "PostgreSQL", "YouTube API"],
+    role: "Desenvolvedor Full-Stack",
+    period: "4º Período",
+    type: "personal",
+    challenges: "Sincronização em tempo real da fila entre múltiplos clientes e o servidor.",
+    solutions: "Implementação de WebSockets para comunicação bidirecional e Spring Security para garantir a integridade das sessões.",
+    results: "Interface altamente responsiva com atualizações instantâneas, eliminando a necessidade de recarregamento de página.",
     githubUrl: "https://github.com",
     liveUrl: "https://example.com"
   },
   {
-    id: "edutrack",
-    title: "EduTrack",
-    description: "Plataforma de gestão acadêmica e análise de desempenho para instituições de ensino técnico.",
-    longDescription: "O EduTrack é um sistema completo de gestão escolar desenvolvido como projeto interdisciplinar no 4º período de ADS. A plataforma ajuda coordenadores a gerenciarem turmas, professores a lançarem notas/presenças e alunos a acompanharem seu rendimento por meio de dashboards visuais de desempenho.",
-    objectives: "Garantir o acompanhamento ágil de notas por alunos e centralizar o controle de frequência acadêmica, gerando alertas preditivos de evasão escolar baseado na frequência acumulada.",
-    stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"],
-    role: "Desenvolvedor Full-Stack Líder. Responsável pelo design do banco de dados relacional, encapsulamento de rotas de segurança na API Express, implementação de gráficos dinâmicos no React.",
-    period: "4º Período (Atual)",
+    id: "jira-ai",
+    title: "Jira AI Integration",
+    description: "Automatização de criação de Histórias de Usuário no Jira utilizando Inteligência Artificial.",
+    longDescription: "Desenvolvido para a Residência do Porto Digital, este sistema utiliza SpringAI para interpretar documentos técnicos e gerar automaticamente Histórias de Usuário (HUs) estruturadas diretamente no Jira através de sua API REST.",
+    objectives: "Reduzir o tempo gasto por Product Owners e analistas na criação manual de tarefas no Jira, garantindo padronização através de IA.",
+    stack: ["Spring Boot", "SpringAI", "Jira API", "Java", "JSON"],
+    role: "Desenvolvedor de Backend & IA",
+    period: "4º Período",
     type: "academic",
-    challenges: "Implementar um sistema de cálculo de notas automatizado e relatórios em tempo real que pudesse lidar com diferentes regras acadêmicas de aprovação sem degradar a performance do banco.",
-    solutions: "Desenvolvemos stored procedures no PostgreSQL para centralizar a lógica matemática de aprovação diretamente no banco de dados e expusemos rotas otimizadas no backend Express com cache em memória para leituras repetitivas dos alunos.",
-    results: "Redução de 60% no tempo gasto pelos professores para consolidar notas de fim de semestre, com visualizações gráficas que aumentaram a retenção de alunos ao alertar preventivamente sobre riscos de reprovação.",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
-  },
-  {
-    id: "greenroute",
-    title: "GreenRoute Logística",
-    description: "Algoritmo e interface de roteirização eco-friendly para otimização de entregas de pequenos negócios locais.",
-    longDescription: "Desenvolvido como projeto de Estrutura de Dados e Programação Orientada a Objetos no 3º período. Trata-se de um protótipo de software de logística de entregas urbanas que calcula a rota de menor distância utilizando grafos, visando menor consumo de combustível e emissão reduzida de CO2.",
-    objectives: "Modelar caminhos de entrega eficientes combinando múltiplos pontos geográficos em menor custo computacional possível, demonstrando aplicação prática da Teoria dos Grafos.",
-    stack: ["TypeScript", "React", "Leaflet Maps", "Express", "SQLite"],
-    role: "Desenvolvedor Front-End & Algoritmos. Modelou a estrutura de dados de grafos ponderados na linguagem TypeScript, integrou o mapa geográfico iterativo com Leaflet e calibrou a filtragem de nós no cliente.",
-    period: "3º Período",
-    type: "academic",
-    challenges: "Calcular rotas de entrega dinâmicas combinando múltiplos pontos de parada de forma eficiente na interface, sem travar a renderização do mapa.",
-    solutions: "Implementação de um algoritmo de vizinho mais próximo otimizado no backend para resolver o problema do caixeiro viajante simplificado e uso de Web Workers no React para processar a malha geográfica sem impactar a Thread principal do navegador.",
-    results: "Tempo de carregamento e cálculo instantâneos para até 20 pontos de entrega coordenados, apresentando uma estimativa ecológica que mostrava as gramas de carbono poupadas em relação à rota padrão.",
+    challenges: "Mapear de forma precisa o conteúdo de documentos diversos para o formato aceito pela API do Jira.",
+    solutions: "Uso de prompts estruturados no SpringAI para extrair campos específicos e validação de schema antes do envio à API.",
+    results: "Aumento na produtividade da equipe de gestão, com criação de HUs em segundos a partir de especificações brutas.",
     githubUrl: "https://github.com"
   },
   {
-    id: "devminder",
-    title: "DevMinder Board",
-    description: "Kanban minimalista para desenvolvedores com integração de focus timers e estatísticas de sprint.",
-    longDescription: "Criado como projeto integrador de Front-end no 2º período de ADS, o DevMinder vai além de um quadro de tarefas comum. Ele unifica a metodologia Kanban tradicional a técnicas de produtividade (como Pomodoro Timer) e gera relatórios automáticos de tempo gasto por atividade.",
-    objectives: "Oferecer uma interface offline responsiva que ajude programadores iniciantes a manterem o foco enquanto gerenciam suas subtarefas sem requisições de rede lentas.",
-    stack: ["React", "Tailwind CSS", "LocalStorage", "Context API"],
-    role: "Desenvolvedor UI/UX & Componentização React. Definiu o fluxo de alteração de coluna por arrastar de cartões, mapeamento do ciclo do cronômetro de trabalho e persistência nativa em navegador.",
-    period: "2º Período",
+    id: "trail",
+    title: "Trail",
+    description: "Plataforma de cursos personalizada com IA e foco em métricas de desenvolvimento.",
+    longDescription: "Projeto da Residência do Porto Digital que utiliza Next.js e C# para oferecer uma plataforma de ensino adaptativa. A IA personaliza as trilhas de aprendizado com base no desempenho e interesses do aluno, fornecendo métricas detalhadas de evolução.",
+    objectives: "Criar um ecossistema de aprendizado focado no desenvolvedor, onde a tecnologia auxilia na identificação de lacunas de conhecimento.",
+    stack: ["Next.js", "C#", ".NET", "PostgreSQL", "AI Integration"],
+    role: "Desenvolvedor Full-Stack",
+    period: "4º Período",
     type: "academic",
-    challenges: "Gerenciar os estados complexos de arrastar e soltar (drag-and-drop) das tarefas garantindo persistência sem utilizar bibliotecas externas grandes e incompatíveis com dispositivos móveis.",
-    solutions: "Criação de manipuladores de eventos nativos da Pointer API, abstraindo o estado global das listas usando React Context API e localStorage para uma experiência de persistência offline fluida.",
-    results: "Nota máxima no quesito usabilidade acadêmica, servindo como modelo de projeto front-end para as turmas seguintes.",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
+    challenges: "Integrar um backend robusto em C# com um frontend dinâmico em Next.js mantendo alta performance.",
+    solutions: "Arquitetura baseada em APIs RESTful bem definidas e otimização de queries para as métricas de desenvolvimento.",
+    results: "Plataforma escalável capaz de gerar relatórios de progresso detalhados e trilhas de estudo sob medida.",
+    githubUrl: "https://github.com"
   },
   {
-    id: "ecocatalog",
-    title: "EcoCatalog",
-    description: "Portal geolocalizado de coleta de lixo eletrônico e conscientização socioambiental.",
-    longDescription: "O primeiro projeto do curso, desenvolvido no 1º período. Um website focado em mapear pontos de coleta autorizados para recebimento de descarte tecnológico (computadores velhos, baterias, cabos) no município, resolvendo a desinformação comunitária.",
-    objectives: "Apresentar uma solução estática de layout responsivo acessível para disseminação de ecopontos oficiais na cidade natal dos alunos.",
-    stack: ["HTML5", "CSS3", "JavaScript (ES6)", "Grid & Flexbox"],
-    role: "Desenvolvedor Frontend Solo. Conduziu o design responsivo, redação dos artigos informativos e testes básicos de tags WCAG de acessibilidade.",
-    period: "1º Período",
-    type: "academic",
-    challenges: "Projetar uma interface que fosse perfeitamente responsiva e acessível para pessoas idosas sem usar frameworks pré-prontos.",
-    solutions: "Estudo aprofundado de tags semânticas e Grid/Flexbox puro com folha de estilos responsiva focada em proporções 'rem' e testes de leitores de tela.",
-    results: "Apresentado na feira regional de tecnologia da faculdade com grande interesse comunitário de moradores locais e validação prática de usabilidade.",
+    id: "gerador-orcamentos",
+    title: "Gerador de Orçamentos",
+    description: "CRUD completo para gerenciamento de orçamentos, clientes e serviços.",
+    longDescription: "Uma solução prática desenvolvida com Next.js e Java para automatizar o processo de orçamentação. O sistema permite o cadastro completo de clientes, catálogo de serviços e a geração dinâmica de propostas comerciais.",
+    objectives: "Centralizar a gestão de vendas e orçamentos para pequenos prestadores de serviço e empresas.",
+    stack: ["Next.js", "Java", "Spring Boot", "PostgreSQL", "Tailwind CSS"],
+    role: "Desenvolvedor Full-Stack",
+    period: "3º Período",
+    type: "personal",
+    challenges: "Gerar documentos formatados de forma consistente a partir dos dados do sistema.",
+    solutions: "Implementação de templates dinâmicos no frontend para visualização e exportação de orçamentos.",
+    results: "Simplificação do fluxo de trabalho administrativo e melhor organização da base de clientes.",
+    githubUrl: "https://github.com"
+  },
+  {
+    id: "focusflow",
+    title: "FocusFlow",
+    description: "Aplicação para gerenciamento de tempo e tarefas com persistência em nuvem.",
+    longDescription: "Gerenciador de tarefas (To-Do) e tempo desenvolvido para maximizar a produtividade. Utiliza Next.js para uma interface rápida e Supabase para autenticação e banco de dados em tempo real.",
+    objectives: "Oferecer uma ferramenta simples e poderosa para organização pessoal e foco em tarefas críticas.",
+    stack: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS"],
+    role: "Desenvolvedor Full-Stack",
+    period: "3º Período",
+    type: "personal",
+    challenges: "Implementar autenticação segura e sincronização de dados entre dispositivos.",
+    solutions: "Uso do Supabase Auth e PostgreSQL Realtime para garantir que os dados estejam sempre atualizados.",
+    results: "Interface limpa e intuitiva que facilita o gerenciamento diário de atividades.",
     githubUrl: "https://github.com"
   }
 ];
 
 export const SKILLS: SkillItem[] = [
   // Linguagens de Programação
-  { name: "TypeScript", level: 85, description: "Tipagem estática estrita, interfaces genéricas, refatorações seguras e integração completa de APIs typed.", category: "language" },
-  { name: "JavaScript (ES6+)", level: 90, description: "Manipulação assíncrona, promessas, desestruturação flexível de dados e manipulação ativa de DOM.", category: "language" },
-  { name: "Python", level: 65, description: "Scripts de automação, manipulação de arquivos locais e estruturação de rotas de serviços leves.", category: "language" },
-  { name: "Java", level: 55, description: "Fundamentos de Orientação a Objetos de nível acadêmico, herança, polimorfismo e manipulação de arquivos.", category: "language" },
+  { name: "Java", level: 90, description: "Especialista no ecossistema Spring (Boot, Security, Data JPA, AI) para APIs robustas e escaláveis.", category: "language", isFeatured: true },
+  { name: "TypeScript / JS", level: 88, description: "Desenvolvimento avançado com tipos estritos, ES6+ e integração de ecossistemas modernos.", category: "language", isFeatured: true },
+  { name: "C#", level: 65, description: "Desenvolvimento de backends escaláveis com .NET para plataformas de ensino.", category: "language" },
 
   // Frameworks/Bibliotecas Frontend
-  { name: "React", level: 88, description: "Criação de SPAs robustas utilizando hooks customizados, Context API, Lazy Loading e transições animadas.", category: "frontend" },
-  { name: "Tailwind CSS", level: 92, description: "Estilização responsiva mobile-first com utilities personalizadas, flexibilidade e dark themes nativos.", category: "frontend" },
-  { name: "HTML5/CSS3", level: 90, description: "Marcação semântica com foco em acessibilidade e flexibilidade de grids estruturais nativos.", category: "frontend" },
+  { name: "React / Next.js", level: 90, description: "Construção de interfaces performáticas com Server Components, Hooks e renderização híbrida.", category: "frontend", isFeatured: true },
+  { name: "Angular", level: 75, description: "Desenvolvimento de aplicações complexas com injeção de dependência e gerenciamento de estado.", category: "frontend" },
+  { name: "Tailwind CSS", level: 92, description: "Estilização responsiva mobile-first com utilities personalizadas.", category: "frontend" },
 
   // Frameworks/Bibliotecas Backend
-  { name: "Node.js", level: 83, description: "Execução assíncrona no servidor, manipulação de processos, fluxos de leitura e escrita.", category: "backend" },
-  { name: "Express", level: 85, description: "Criação de APIs REST robustas, roteamentos modulares, manipulação global de erros e middlewares corporativos.", category: "backend" },
-  { name: "FastAPI", level: 60, description: "Estruturação rápida de APIs Python assíncronas com validação orientada a tipos via Pydantic.", category: "backend" },
+  { name: "Spring Boot", level: 85, description: "Domínio completo de Spring Security para autenticação, SpringAI para integrações e JPA para persistência.", category: "backend", isFeatured: true },
+  { name: "Node.js / Express", level: 83, description: "Execução assíncrona no servidor e roteamentos modulares.", category: "backend" },
+  { name: "Supabase", level: 75, description: "Backend-as-a-Service, autenticação e banco de dados em tempo real.", category: "backend" },
 
   // Banco de Dados
-  { name: "PostgreSQL", level: 78, description: "Modelagem de dados (DER/MER), chaves estrangeiras, stored procedures e otimização de consultas complexas.", category: "database" },
-  { name: "MongoDB", level: 65, description: "Manipulação flexível de dados não estruturados via drivers nativos ou modelagem marta Mongoose.", category: "database" },
-  { name: "SQLite", level: 80, description: "Armazenamento em arquivo único leve, extremamente conveniente para demonstrações integradoras ágeis.", category: "database" },
+  { name: "PostgreSQL", level: 80, description: "Modelagem de dados (DER/MER), chaves estrangeiras e otimização de consultas.", category: "database" },
 
   // Ferramentas
-  { name: "Git & GitHub", level: 88, description: "Versionamento de código estruturado (Git Flow), pull requests seguras e auditoria de commits.", category: "tools" },
-  { name: "Docker", level: 62, description: "Imagens leves de ambiente e conteinerização de APIs para portabilidade contínua de software.", category: "tools" },
-  { name: "Metodologias Ágeis", level: 75, description: "Execução ágil com SCRUM acadêmico, planejamento de boards Kanban e rotinas de acompanhamento.", category: "tools" }
+  { name: "Git & GitHub", level: 90, description: "Controle de versão avançado, fluxos de trabalho colaborativos e Git Flow.", category: "tools", isFeatured: true },
+  { name: "Docker", level: 80, description: "Conteinerização de aplicações, gerenciamento de imagens e ambientes isolados para portabilidade.", category: "tools", isFeatured: true },
+  { name: "WebSocket", level: 70, description: "Comunicação em tempo real para sistemas de fila e sessões interativas.", category: "tools" }
 ];
 
 export const ACADEMIC_TIMELINE: AcademicMilestone[] = [
   {
     period: "1º Período",
-    semesterName: "Fundamentos de Sistemas",
+    semesterName: "Programação & Fundamentos",
     status: "completed",
-    description: "Introdução ao raciocínio lógico, algoritmos elementares, arquitetura de computadores e design web inicial com HTML/CSS.",
-    courses: ["Introdução a Algoritmos", "Design Web Responsivo", "Arquitetura de Softwares", "Matemática Discreta"]
+    description: "Introdução à lógica e fundamentos da computação, focando em bases matemáticas e gestão de pessoas.",
+    courses: ["Introdução à Computação", "Matemática para Computação", "Sistemas Digitais", "Fundamentos de Programação", "Projeto 1", "FP1: Gestão de Pessoas"]
   },
   {
     period: "2º Período",
-    semesterName: "Programação & Modelagem",
+    semesterName: "Problemas Computacionais",
     status: "completed",
-    description: "Nivelamento em orientação a objetos nas linguagens principais, bancos de dados relacionais e análise de requisitos utilizando UML.",
-    courses: ["Programação Orientada a Objetos", "Banco de Dados I", "Engenharia de Requisitos", "Interface Humano-Computador"]
+    description: "Exploração de diferentes paradigmas de programação, lógica avançada e design de interfaces humano-computador.",
+    courses: ["Programação Imperativa e Funcional", "Interfaces Humano Computador", "Lógica para Computação", "Fundamentos e Desenvolvimento de Softwares", "Projeto 2", "FP2: Gestão de Projetos"]
   },
   {
     period: "3º Período",
-    semesterName: "Estruturas & Redes",
+    semesterName: "Infraestruturas Computacionais",
     status: "completed",
-    description: "Aprofundamento em algoritmos complexos, gerenciamento de dados na RAM, além de focar em redes de computadores e segurança inicial.",
-    courses: ["Estruturas de Dados", "Redes de Computadores", "Banco de Dados II", "Metodologia Científica"]
+    description: "Foco em infraestrutura básica de hardware e rede, algoritmos estruturados e programação orientada a objetos.",
+    courses: ["Programação Orientada a Objetos", "Infraestrutura de Software (SO)", "Infraestrutura de Comunicação (RSD)", "Algoritmo e Estrutura de Dados", "Estatística e Probabilidade", "Projeto 3"]
   },
   {
     period: "4º Período",
-    semesterName: "Arquitetura Web & DevOps (Atual)",
+    semesterName: "Métodos e Técnicas (Atual)",
     status: "current",
-    description: "Foco integral no desenvolvimento de sistemas web complexos (full-stack), qualidade de software, testes e infraestrutura básica em nuvem.",
-    courses: ["Desenvolvimento Web Avançado", "Gerência de Projetos", "Qualidade e Testes de Software", "Sistemas Operacionais e DevOps"]
+    description: "Aprofundamento em bancos de dados, engenharia de software, sistemas distribuídos e desenvolvimento web avançado.",
+    courses: ["Modelagem e Projeto de BD", "Requisitos, Projeto de Software e Validação", "Computação Concorrente, Paralela e Distribuída", "Desenvolvimento Web", "Engenharia de Software e IA", "Projeto 4"]
   },
   {
     period: "5º Período",
-    semesterName: "Sistemas Distribuídos & Mobile",
+    semesterName: "Sistemas & Negócios",
     status: "future",
-    description: "No horizonte acadêmico estão o desenvolvimento nativo ou híbrido para dispositivos móveis, além de computação paralela/distribuída.",
-    courses: ["Desenvolvimento para Dispositivos Móveis", "Sistemas Distribuídos", "Projeto de Conclusão de ADS I", "Ética Tecnológica"]
+    description: "Consolidação com foco em segurança da informação, desenvolvimento mobile e visão de negócios na internet.",
+    courses: ["Segurança da Informação", "Desenvolvimento Mobile", "Eletiva 2", "Eletiva 3", "Negócios na Internet", "Projeto 5"]
   }
 ];

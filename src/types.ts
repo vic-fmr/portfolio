@@ -20,6 +20,7 @@ export interface SkillItem {
   level: number; // 0-100 percentage
   description: string;
   category: "language" | "frontend" | "backend" | "database" | "tools";
+  isFeatured?: boolean;
 }
 
 export interface AcademicMilestone {
